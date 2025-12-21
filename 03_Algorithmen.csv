@@ -1,0 +1,6 @@
+Algorithmus,Typ,Stärken,Schwächen,Parameter
+K-Means,Unsupervised (Clustering),"Schnell, skalierbar, einfach","Lokales Optimum, k-Wahl schwierig",n_clusters=k
+Logistische Regression,Supervised (Klassifikation),"Interpretierbar, probabil. Output","Nur lineare Grenzen, Assumption","max_iter, random_state"
+Random Forest,Supervised (Klassifikation),"Robust, Feature-Importance, nonlinear","Overfitting-Gefahr, Black Box","n_estimators, max_depth, min_samples_split"
+Gradient Boosting,Supervised (Klassifikation),"Hohe Accuracy, Feature-Importance","Komplexität, Overfitting-Gefahr","n_estimators, learning_rate, max_depth"
+Support Vector Machine,Supervised (Klassifikation),"Robust bei hochdim., nonlinear","Langsam bei großen Daten, Black Box","C, kernel, gamma"
