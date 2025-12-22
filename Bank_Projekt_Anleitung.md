@@ -1,8 +1,13 @@
 # Umfassende Anleitung: Data-Science-Projekt mit dem Bank-Datensatz (Gruppe 8)
 
-## Einleitung und Übersicht
+## Übersicht
 
-Dieses Dokument bietet eine detaillierte Schritt-für-Schritt-Anleitung zur Lösung der Projektaufgabe für den Bank-Datensatz. Das Projekt umfasst vier gewichtete Teilaufgaben, die eine vollständige Data-Science-Pipeline abdecken: Explorative Datenanalyse (20%), Data Cleaning und Feature Engineering (20%), Machine Learning mit überwachtem und unüberwachtem Lernen (40%), sowie Evaluation und Reflexion (20%).
+Lösung der Projektaufgabe für den Bank-Datensatz.
+Vier gewichtete Teilaufgaben, die eine vollständige Data-Science-Pipeline abdecken: 
+- Explorative Datenanalyse (20%), 
+- Data Cleaning und Feature Engineering (20%), 
+- Machine Learning mit überwachtem und unüberwachtem Lernen (40%), 
+- sowie Evaluation und Reflexion (20%).
 
 ### Datensatz-Übersicht
 
