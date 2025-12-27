@@ -43,7 +43,7 @@ Der Bank-Datensatz enthält 11.162 Kundenkontakte mit 17 Attributen:
 ## Teil 1: Explorative Datenanalyse (20%)
 
 ### Ziel
-Sie sollen den Datensatz gründlich untersuchen, um Datenqualität, Verteilungen, Muster und Anomalien zu identifizieren.
+Datensatz gründlich untersuchen, um Datenqualität, Verteilungen, Muster und Anomalien zu identifizieren
 
 ### 1.1 Grundlegende Datenstruktur-Analyse
 
@@ -66,10 +66,9 @@ print(f"\nErste 10 Zeilen:\n{df.head(10)}")
 print(f"\nDuplicate Rows: {df.duplicated().sum()}")
 ```
 
-**Was Sie tun:**
-- Dokumentieren Sie die Anzahl der Zeilen (Samples) und Spalten (Features)
-- Notieren Sie Datentypen und fehlende Werte
-- Überprüfen Sie auf Duplikate (sehr selten im Banking, aber zu dokumentieren)
+- Dokumentieren Anzahl der Zeilen (Samples) und Spalten (Features)
+- Notieren Datentypen und fehlende Werte
+- Überprüfen auf Duplikate (sehr selten im Banking, aber zu dokumentieren)
 
 **Erwartete Befunde:**
 - 11.162 Zeilen × 17 Spalten
@@ -90,8 +89,6 @@ for col in df.select_dtypes(include='object').columns:
     print(f"\n{col} - Unique Werte: {df[col].nunique()}")
     print(df[col].value_counts())
 ```
-
-**Was Sie analysieren:**
 
 a) **Lagemaße** (Mittelwert, Median, Modus)
    - Alter: Mittelwert 41 Jahre, Median 39 Jahre → relativ symmetrisch
@@ -143,8 +140,6 @@ plt.savefig('02_boxplots.png', dpi=300)
 plt.show()
 ```
 
-**Was Sie analysieren:**
-
 - **Normalverteilung:** Überprüfen Sie visuell mit Q-Q-Plots
   - `age`: Nähe zur Normalverteilung
   - `balance`: Stark rechtsschief (Log-Transformation später relevant!)
@@ -181,8 +176,6 @@ correlations_with_target = df[numeric_cols + ['deposit_binary']].corr()['deposit
 print("\nKorrelation mit Zielvariable 'deposit':")
 print(correlations_with_target)
 ```
-
-**Was Sie dokumentieren:**
 
 - **Positive Korrelationen mit Zielgröße:**
   - `duration`: Längere Anrufe → höhere Abschlusswahrscheinlichkeit (erwartet)
@@ -235,7 +228,6 @@ print(f"\nKunden ohne früheren Kontakt (pdays = -1): {(df['pdays'] == -1).sum()
 print(f"Abschlussrate dieser Kunden: {(df[df['pdays'] == -1]['deposit'] == 'yes').sum() / (df['pdays'] == -1).sum() * 100:.1f}%")
 ```
 
-**Dokumentieren Sie:**
 - Saisonalität: Mai ist der erfolgreichste Monat (Kampagnenstart)
 - pdays-Spezialfall: -1 als fehlende Information (nicht Wert 0)
 - Zeitpunkt-Effekt: Kontakte am Monatsanfang vs. -ende
@@ -245,7 +237,7 @@ print(f"Abschlussrate dieser Kunden: {(df[df['pdays'] == -1]['deposit'] == 'yes'
 ## Teil 2: Data Cleaning und Feature Engineering (20%)
 
 ### Ziel
-Bereiten Sie die Daten für Machine Learning vor: Fehlende Werte, Kodierung, Skalierung, neue Features.
+Bereiten die Daten für Machine Learning vor: Fehlende Werte, Kodierung, Skalierung, neue Features
 
 ### 2.1 Behandlung fehlender Werte
 
@@ -413,7 +405,7 @@ print(f"Feature-Dimension: {X_train.shape[1]}")
 
 ## Teil 3: Unsupervised und Supervised Learning (40%)
 
-Dieses ist die Kernaufgabe! Sie müssen mindestens ein unüberwachtes und ein überwachtes Verfahren anwenden.
+Kernaufgabe! Ein unüberwachtes und ein überwachtes Verfahren anwenden
 
 ### 3.1 Unüberwachtes Lernen: Clustering (K-Means)
 
@@ -520,7 +512,7 @@ plt.show()
 
 ### 3.3 Überwachtes Lernen: Klassifikation
 
-Sie müssen mindestens ein überwachtes Verfahren anwenden. Zwei gute Optionen:
+mindestens ein überwachtes Verfahren anwenden. Zwei gute Optionen:
 
 #### Option 1: Logistische Regression
 
@@ -870,5 +862,3 @@ print(f"Geschätzter Profit: €{profit:,.0f}")
 - Clustering: 05_CLUST.pdf
 - Klassifikation: 07_KLASS.pdf
 - Regression: 08_REGR.pdf
-
-Viel Erfolg bei Ihrem Projekt!

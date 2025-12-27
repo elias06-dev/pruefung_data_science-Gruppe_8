@@ -1,6 +1,6 @@
 # Schnellstart: Bank-Projekt Checklist (Gruppe 8)
 
-## 🎯 Projektübersicht
+## Projektübersicht
 - **Datensatz:** bank.csv (11.162 Samples × 17 Attribute)
 - **Zielvariable:** `deposit` (binär: yes/no) - Kunde hat Termingeld abgeschlossen?
 - **Aufgabe:** Vorhersage-Modell für Kunden, die wahrscheinlich ein Termingeld abschließen
@@ -8,7 +8,7 @@
 
 ---
 
-## 📋 Phase 1: Explorative Datenanalyse (20%)
+## Phase 1: Explorative Datenanalyse (20%)
 
 ### Zu tun:
 - [ ] Daten einlesen mit `pd.read_csv('bank.csv')`
@@ -31,16 +31,14 @@
   - [ ] Extreme Werte in `balance` und `campaign`
 
 ### Dokuemenation:
-Schreiben Sie Markdown-Text für jeden Punkt, warum interessant für Modellierung ist.
+Markdown-Text für jeden Punkt, warum interessant für Modellierung
 
----
-
-## 🔧 Phase 2: Data Cleaning & Feature Engineering (20%)
+##  Phase 2: Data Cleaning & Feature Engineering (20%)
 
 ### Zu tun:
 
 #### 2.1 Fehlende Werte
-- [ ] Prüfen auf NaN/NULL (es sollten keine sein, aber dokumentieren!)
+- [ ] Prüfen auf NaN/NULL (es sollten keine sein, aber dokumentieren)
 - [ ] pdays = -1 → neue Features:
   ```python
   df['contacted_before'] = (df['pdays'] != -1).astype(int)
@@ -131,7 +129,7 @@ Schreiben Sie Markdown-Text für jeden Punkt, warum interessant für Modellierun
 
 ---
 
-## 🤖 Phase 3: Machine Learning (40%)
+## Phase 3: Machine Learning (40%)
 
 ### 3.1 Unüberwachtes Lernen: K-Means Clustering
 
@@ -257,7 +255,7 @@ y_pred_proba_gb = gb.predict_proba(X_test)[:, 1]
 
 ---
 
-## 📊 Phase 4: Evaluation & Reflexion (20%)
+## Phase 4: Evaluation & Reflexion (20%)
 
 ### 4.1 Evaluationsmetriken auf Test-Set
 
@@ -385,7 +383,7 @@ Schreiben Sie einen Abschnitt für jeden Punkt:
 
 ---
 
-## 📝 Notebook-Struktur (Empfehlung)
+## Notebook-Struktur
 
 ```
 1. Imports und Setup
@@ -421,7 +419,7 @@ Schreiben Sie einen Abschnitt für jeden Punkt:
 
 ---
 
-## 🎓 Wichtige Konzepte
+## Wichtige Konzepte
 
 ### TP, TN, FP, FN
 - **TP (True Positive):** Model sagt Ja, Wahrheit ist Ja ✓
@@ -444,7 +442,7 @@ Schreiben Sie einen Abschnitt für jeden Punkt:
 
 ---
 
-## ✅ Final Checklist vor Abgabe
+## Final Checklist vor Abgabe
 
 - [ ] Jupyter-Notebook enthält Gruppennummer und Namen + Matrikelnummern
 - [ ] Alle Code-Zellen ausgeführt und Outputs sichtbar
@@ -458,7 +456,7 @@ Schreiben Sie einen Abschnitt für jeden Punkt:
 
 ---
 
-## 🔗 Referenzen zu Vorlesungen
+## Referenzen zu Vorlesungen
 
 - **EDA:** 03_EXP.pdf - Kapitel Data Exploration, Data Profiling
 - **Pandas:** 02_PANDAS.pdf - DataFrame, Abfragen, Aggregationen
@@ -468,5 +466,3 @@ Schreiben Sie einen Abschnitt für jeden Punkt:
 - **Regression & Evaluation:** 08_REGR.pdf - Metriken, Cross-Validation
 
 ---
-
-**Viel Erfolg bei Ihrem Projekt! 🚀**
