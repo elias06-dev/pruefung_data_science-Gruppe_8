@@ -1,7 +1,0 @@
-Metrik,Formel,Interpretation,Wann nutzen?
-Accuracy,(TP + TN) / (TP+TN+FP+FN),Gesamtanteil korrekter Vorhersagen,Balanced Classes
-Precision,TP / (TP + FP),Von positiv vorhergesagten: wie viele korrekt?,Falsch-Positive teuer
-Recall,TP / (TP + FN),Von echten positiven: wie viele erkannt?,Falsch-Negative teuer
-F1-Score,2 * (Precision * Recall) / (Precision + Recall),Harmonsches Mittel von Precision & Recall,Imbalanced Data
-ROC-AUC,Area Under ROC-Kurve,Tradeoff zwischen True Pos. Rate und False Pos. Rate,Klassifizierer-Vergleich
-Specificity,TN / (TN + FP),Von echten negativen: wie viele erkannt?,Klassifizierer-Vergleich
